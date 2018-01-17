@@ -1,4 +1,4 @@
-package carlesarnal.com.themoviedb.api.model;
+package com.carlesarnal.themoviedb.api.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;

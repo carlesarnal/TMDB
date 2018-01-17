@@ -1,4 +1,4 @@
-package carlesarnal.com.themoviedb.api.model;
+package com.carlesarnal.themoviedb.api.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -16,6 +16,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
         "overview",
         "id",
         "title",
+        "backdrop_path",
         "popularity",
         "vote_count",
         "vote_average"
@@ -30,6 +31,8 @@ public class Movie {
     public String id;
     @JsonProperty("title")
     public String title;
+    @JsonProperty("backdrop_path")
+    public String backdropPath;
     @JsonProperty("popularity")
     public float popularity;
     @JsonProperty("vote_count")
