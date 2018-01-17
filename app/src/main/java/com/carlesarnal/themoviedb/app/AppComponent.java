@@ -1,11 +1,12 @@
-package carlesarnal.com.themoviedb;
+package com.carlesarnal.themoviedb.app;
 
 import android.app.Application;
 
+import com.carlesarnal.themoviedb.api.ApiModule;
+import com.carlesarnal.themoviedb.api.ApiService;
+
 import javax.inject.Singleton;
 
-import carlesarnal.com.themoviedb.api.ApiModule;
-import carlesarnal.com.themoviedb.api.ApiService;
 import dagger.Component;
 
 /**

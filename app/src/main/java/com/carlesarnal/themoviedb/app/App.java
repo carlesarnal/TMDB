@@ -1,8 +1,10 @@
-package carlesarnal.com.themoviedb;
+package com.carlesarnal.themoviedb.app;
 
 import android.app.Application;
 
-import carlesarnal.com.themoviedb.api.ApiModule;
+import com.carlesarnal.themoviedb.api.ApiModule;
+import com.carlesarnal.themoviedb.R;
+
 
 /**
  * Created by carles on 17/01/18.

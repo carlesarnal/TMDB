@@ -1,4 +1,4 @@
-package carlesarnal.com.themoviedb;
+package com.carlesarnal.themoviedb.app;
 
 import android.app.Application;
 

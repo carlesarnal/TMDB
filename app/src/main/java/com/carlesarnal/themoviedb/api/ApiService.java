@@ -1,10 +1,10 @@
-package carlesarnal.com.themoviedb.api;
+package com.carlesarnal.themoviedb.api;
 
 /**
  * Created by carles on 17/01/18.
  */
 
-import carlesarnal.com.themoviedb.api.model.Movies;
+import com.carlesarnal.themoviedb.api.model.Movies;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
@@ -15,7 +15,7 @@ public interface ApiService {
 
 
 
-    @GET("/3/movie/top_rated")
+    @GET("/3/movie/activity_top_rated")
     Call<Movies> getTopRatedMovies(@Query("page") int page);
 
     @GET("/3/movie/{movie_id}/similar")

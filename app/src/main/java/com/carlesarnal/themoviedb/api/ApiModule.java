@@ -1,4 +1,4 @@
-package carlesarnal.com.themoviedb.api;
+package com.carlesarnal.themoviedb.api;
 
 import com.facebook.stetho.okhttp3.StethoInterceptor;
 import com.fasterxml.jackson.databind.ObjectMapper;
