@@ -15,7 +15,7 @@ public interface ApiService {
 
 
 
-    @GET("/3/movie/activity_top_rated")
+    @GET("/3/movie/top_rated")
     Call<Movies> getTopRatedMovies(@Query("page") int page);
 
     @GET("/3/movie/{movie_id}/similar")
