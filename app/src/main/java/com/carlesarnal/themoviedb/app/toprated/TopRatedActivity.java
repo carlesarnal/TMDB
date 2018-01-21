@@ -50,11 +50,12 @@ public class TopRatedActivity extends AppCompatActivity implements TopRatedContr
         ButterKnife.bind(this);
 
         setupContentView();
-        DaggerMainComponent.builder()
+        DaggerTopRatedComponent.builder()
                 .appComponent(App.getAppComponent(getApplication()))
-                .mainModule(new TopRatedModule(this))
+                .topRatedModule(new TopRatedModule(this))
                 .build()
                 .inject(this);
+
     }
 
     private void setupContentView() {

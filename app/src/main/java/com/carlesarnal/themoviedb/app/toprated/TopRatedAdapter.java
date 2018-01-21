@@ -68,9 +68,9 @@ public class TopRatedAdapter extends RecyclerView.Adapter<TopRatedAdapter.ViewHo
         String imagePath = "";
 
         if (movie.posterPath != null && !movie.posterPath.isEmpty()) {
-            imagePath = movie.posterPath;
+            imagePath = activity.getString(R.string.images_base_url) + movie.posterPath;
         } else {
-            imagePath = movie.backdropPath;
+            imagePath = activity.getString(R.string.images_base_url) + movie.backdropPath;
         }
 
         return imagePath;
