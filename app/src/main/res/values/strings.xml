@@ -4,4 +4,5 @@
     <string name="images_base_url">http://image.tmdb.org/t/p/w185/</string>
     <string name="api_key">3bd94381fd4a6a0b8c69779898d497b6</string>
     <string name="generic_error">Oops! Something went wrong, please, try again</string>
+    <string name="overview_header">Overview</string>
 </resources>

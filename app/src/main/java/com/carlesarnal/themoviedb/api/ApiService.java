@@ -19,7 +19,7 @@ public interface ApiService {
     Call<Movies> getTopRatedMovies(@Query("page") int page);
 
     @GET("/3/movie/{movie_id}/similar")
-    Call<Movies> getRelatedMovies(@Path("id") int id);
+    Call<Movies> getRelatedMovies(@Path("movie_id") int id);
 
 
 }

@@ -1,5 +1,6 @@
 package com.carlesarnal.themoviedb.app.toprated;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -11,6 +12,7 @@ import android.view.View;
 import com.carlesarnal.themoviedb.R;
 import com.carlesarnal.themoviedb.api.model.Movie;
 import com.carlesarnal.themoviedb.app.App;
+import com.carlesarnal.themoviedb.app.moviedetail.MovieDetailActivity;
 
 import java.util.List;
 
@@ -134,6 +136,9 @@ public class TopRatedActivity extends AppCompatActivity implements TopRatedContr
 
     @Override
     public void onItemClick(Movie movie) {
+        Intent i = new Intent(this, MovieDetailActivity.class);
+        i.putExtra("movie", movie);
+        startActivity(i);
     }
 
     @OnClick(R.id.errorText)
