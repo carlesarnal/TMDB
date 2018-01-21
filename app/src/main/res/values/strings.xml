@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">The Movie DB</string>
     <string name="base_url">https://api.themoviedb.org/</string>
+    <string name="images_base_url">http://image.tmdb.org/t/p/w185/</string>
     <string name="api_key">3bd94381fd4a6a0b8c69779898d497b6</string>
-    <string name="title_activity_main2">Main2Activity</string>
     <string name="generic_error">Oops! Something went wrong, please, try again</string>
+    <string name="overview_header">Overview</string>
 </resources>
