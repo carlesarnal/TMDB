@@ -41,7 +41,7 @@ public class TopRatedAdapter extends RecyclerView.Adapter<TopRatedAdapter.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(final ViewHolder holder, int position) {
         final Movie movie = movies.get(position);
 
         String fullImageUrl = getFullImageUrl(movie);
@@ -58,7 +58,7 @@ public class TopRatedAdapter extends RecyclerView.Adapter<TopRatedAdapter.ViewHo
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                itemClickListener.onItemClick(movie);
+                itemClickListener.onItemClick(movie, holder.imageView);
             }
         });
     }
@@ -114,7 +114,7 @@ public class TopRatedAdapter extends RecyclerView.Adapter<TopRatedAdapter.ViewHo
 
     public interface ItemClickListener {
 
-        void onItemClick(Movie movie);
+        void onItemClick(Movie movie, ImageView imageView);
 
     }
 }

@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -30,7 +31,7 @@ public class MovieDetailActivity extends AppCompatActivity implements MovieDetai
     MovieDetailPresenter detailPresenter;
 
     @BindView(R.id.container)
-    View contentView;
+    View container;
     @BindView(R.id.imageView)
     ImageView imageView;
     @BindView(R.id.overviewHeader)
@@ -41,6 +42,8 @@ public class MovieDetailActivity extends AppCompatActivity implements MovieDetai
     View errorView;
     @BindView(R.id.progressBar)
     View loadingView;
+    @BindView(R.id.contentView)
+    View contentView;
 
     private Movie movie = null;
     private final static String movieId = "movie";
@@ -71,7 +74,7 @@ public class MovieDetailActivity extends AppCompatActivity implements MovieDetai
 
     private void setupContentView() {
         onSwipeTouchListener = new OnSwipeTouchListener(this, this);
-        contentView.setOnTouchListener(onSwipeTouchListener);
+        container.setOnTouchListener(onSwipeTouchListener);
     }
 
 
@@ -141,7 +144,7 @@ public class MovieDetailActivity extends AppCompatActivity implements MovieDetai
     private void showContent(boolean show) {
         int visibility = show ? View.VISIBLE : View.INVISIBLE;
 
-        contentView.setVisibility(visibility);
+        container.setVisibility(visibility);
         overviewHeader.setVisibility(visibility);
         overviewTextView.setVisibility(visibility);
     }
@@ -166,5 +169,16 @@ public class MovieDetailActivity extends AppCompatActivity implements MovieDetai
         movie = movies.get(currentIndex);
         setCurrentMovie(movie);
         setTitle(movie.title);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            // Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                supportFinishAfterTransition();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

@@ -3,11 +3,13 @@ package com.carlesarnal.themoviedb.app.toprated;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.carlesarnal.themoviedb.R;
 import com.carlesarnal.themoviedb.api.model.Movie;
@@ -135,10 +137,12 @@ public class TopRatedActivity extends AppCompatActivity implements TopRatedContr
 
 
     @Override
-    public void onItemClick(Movie movie) {
+    public void onItemClick(Movie movie, ImageView imageView) {
         Intent i = new Intent(this, MovieDetailActivity.class);
         i.putExtra("movie", movie);
-        startActivity(i);
+        ActivityOptionsCompat options = ActivityOptionsCompat.
+                makeSceneTransitionAnimation(this, imageView, "movieImage");
+        startActivity(i, options.toBundle());
     }
 
     @OnClick(R.id.errorText)
